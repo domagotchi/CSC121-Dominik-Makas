@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    srand(time(0)); // Seed the random number generator with the current time
+    srand(time(0));
     int N;
     int S;
     int min;
