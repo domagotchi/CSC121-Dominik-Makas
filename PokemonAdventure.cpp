@@ -12,6 +12,9 @@ int main() {
     raticate
     snorlax
 
-cout << "Welcome to the world of Pokemon!" << endl;
-cout << "Choose your Pokemon:"
-string choice1 = cout << "1) " rand
+    cout << "Welcome to the world of Pokemon!" << endl;
+    cout << "Choose your Pokemon:" << endl;
+    string choice1 = rand;
+    string choice2 = rand;
+    string choice3 = rand;
+    cout << "1) " << choice1 
