@@ -195,3 +195,6 @@ int main() {
     cout << "A challeneger approaches..." << endl;
     cout << "Challenger sent out " << battle1_pokemon << " for battle! << endl;
 
+//Battle details
+        //To be continued...
+
