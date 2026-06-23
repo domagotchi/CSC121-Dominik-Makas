@@ -60,7 +60,7 @@ int main() {
     cout << "Congratulations!" << endl;
     cout << "You obtained " << user_pokemon << "!" << endl;
 
-//Starter stats
+//User stats
     if (user_pokemon == "Venusaur") {
         hp = 301;
         atk = 200;
@@ -129,3 +129,69 @@ int main() {
     while (battle1_pokemon == "" || battle1_pokemon == user_pokemon) {
         battle1_pokemon = rand;
     }
+    if (battle1_pokemon == "Venusaur") {
+        opp_hp = 301;
+        opp_atk = 200;
+        opp_def = 202;
+        opp_spa = 236;
+        opp_spd = 236;
+        opp_spe = 196;
+    }
+    if (battle1_pokemon == "Charizard") {
+        opp_hp = 297;
+        opp_atk = 204;
+        opp_def = 192;
+        opp_spa = 254;
+        opp_spd = 206;
+        opp_spe = 236;        
+    }
+    if (battle1_pokemon == "Blastoise") {
+        opp_hp = 299;
+        opp_atk = 202;
+        opp_def = 236;
+        opp_spa = 206;
+        opp_spd = 246;
+        opp_spe = 192;
+    }
+    if (battle1_pokemon == "Snorlax") {
+        opp_hp = 461;
+        opp_atk = 256;
+        opp_def = 166;
+        opp_spa = 166;
+        opp_spd = 256;
+        opp_spe = 96;
+    }
+    if (battle1_pokemon == "Jolteon") {
+        opp_hp = 271;
+        opp_atk = 166;
+        opp_def = 156;
+        opp_spa = 256;
+        opp_spd = 296;
+    }
+    if (battle1_pokemon == "Mew") {
+        opp_hp = 341;
+        opp_atk = 236;
+        opp_def = 236;
+        opp_spa = 236;
+        opp_spd = 236;
+        opp_spe = 236;
+    }
+    if (battle1_pokemon == "Machamp") {
+        opp_hp = 321;
+        opp_atk = 296;
+        opp_def = 196;
+        opp_spa = 166;
+        opp_spd = 206;
+        opp_spe = 146;
+    }
+    if (battle1_pokemon == "Gengar") {
+        opp_hp = 261;
+        opp_atk = 166;
+        opp_def = 156;
+        opp_spa = 296;
+        opp_spd = 186;
+        opp_spe = 256;
+    }
+    cout << "A challeneger approaches..." << endl;
+    cout << "Challenger sent out " << battle1_pokemon << " for battle! << endl;
+
