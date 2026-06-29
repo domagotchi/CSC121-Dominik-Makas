@@ -1,13 +1,13 @@
 #include <iostream>
+#include <vector> 
 using namespace std;
 
 int main() {
-
-    srand(time(0));
+    srand(time(nullptr));
     string user_pokemon;
     string battle1_pokemon;
 
-//Stat variables
+    // Stat variables
     int hp;
     int atk;
     int spa;
@@ -23,24 +23,28 @@ int main() {
     int opp_spd;
     int opp_spe;
 
-//All Possible Pokemon in the program
-    "Venusaur",
-    "Charizard",
-    "Blastoise",
-    "Snorlax",
-    "Jolteon",
-    "Mew",
-    "Machamp",
-    "Gengar",
+    // All Possible Pokemon in the program
+    vector<string> pool = {
+        "Venusaur",
+        "Charizard",
+        "Blastoise",
+        "Snorlax",
+        "Jolteon",
+        "Mew",
+        "Machamp",
+        "Gengar"
+    }
 
-//Choose your Pokemon
+    int pool_size = pool.size();
+
+    //Choose your Pokemon
     cout << "Welcome to the world of Pokemon!" << endl;
     cout << "Choose your Pokemon:" << endl;
     cout << endl;
-    string choice1 = rand;
-    string choice2 = rand;
-    string choice3 = rand;
-    string choice = "0"
+    string choice1 = rand() % pool_size;
+    string choice2 = rand() % pool_size;
+    string choice3 = rand() % pool_size;
+    string choice = "0";
     cout << "1) " << choice1 << endl;
     cout << "2) " << choice2 << endl;
     cout << "3) " << choice3 << endl;
@@ -60,7 +64,7 @@ int main() {
     cout << "Congratulations!" << endl;
     cout << "You obtained " << user_pokemon << "!" << endl;
 
-//User stats
+    //User stats
     if (user_pokemon == "Venusaur") {
         hp = 301;
         atk = 200;
@@ -125,7 +129,7 @@ int main() {
         spe = 256;
     }
 
-//Opponent stats
+    //Opponent stats
     while (battle1_pokemon == "" || battle1_pokemon == user_pokemon) {
         battle1_pokemon = rand;
     }
@@ -195,6 +199,9 @@ int main() {
     cout << "A challeneger approaches..." << endl;
     cout << "Challenger sent out " << battle1_pokemon << " for battle! << endl;
 
-//Battle details
+        //Battle details
         //To be continued...
 
+
+    return 0;
+}
