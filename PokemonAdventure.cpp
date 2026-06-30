@@ -1,13 +1,30 @@
 #include <iostream>
-#include <vector> 
+#include <vector>
 using namespace std;
 
 int main() {
+
     srand(time(nullptr));
     string user_pokemon;
     string battle1_pokemon;
+    
+    string pokeArt = R"(
+⠀⠀⠀⠀⠀⣀⣀⣀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⡀⠀⠀⠀⠀
+⠀⠀⢀⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣀⣀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⢀⣀⣸⣿⣿⣿⣿⣀⣀⠀⢀⣀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢸⣿⣿⣀⣀⣿⣿⣿⣿⣿⣇⣀⣀⣀⣸⣿⣿⣿⣿⣿⣇⣀⣸⣿⣿
+⠀⠀⢸⣿⣿⡇⠀⠀⠀⠀⢸⣿⣿⣿⣿⠀⠀⠀⠀⠀⣿⣿⣿⠀⠀
+⠀⠀⠸⠿⢿⣃⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⡿⠿⠿⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣸⣿⣿⣿⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+    )";
 
-    // Stat variables
+
+    //Stat variables
     int hp;
     int atk;
     int spa;
@@ -23,8 +40,8 @@ int main() {
     int opp_spd;
     int opp_spe;
 
-    // All Possible Pokemon in the program
-    vector<string> pool = {
+    //All Possible Pokemon in the program
+    vector<string> pokechoices = {
         "Venusaur",
         "Charizard",
         "Blastoise",
@@ -33,21 +50,20 @@ int main() {
         "Mew",
         "Machamp",
         "Gengar"
-    }
-
-    int pool_size = pool.size();
+    };
 
     //Choose your Pokemon
     cout << "Welcome to the world of Pokemon!" << endl;
     cout << "Choose your Pokemon:" << endl;
     cout << endl;
-    string choice1 = rand() % pool_size;
-    string choice2 = rand() % pool_size;
-    string choice3 = rand() % pool_size;
+    string choice1 = pokechoices[rand() % pokechoices.size()];
+    string choice2 = pokechoices[rand() % pokechoices.size()];
+    string choice3 = pokechoices[rand() % pokechoices.size()];
     string choice = "0";
     cout << "1) " << choice1 << endl;
     cout << "2) " << choice2 << endl;
     cout << "3) " << choice3 << endl;
+    cout << endl;
     
     while (choice != "1" && choice != "2" && choice != "3") {
         cin >> choice;
@@ -56,13 +72,14 @@ int main() {
             cout << "Select your Pokemon by entering '1', '2', or '3'." << endl;
         }
     }
-    if (choice == "1") {user_pokemon = choice1}
-    if (choice == "2") {user_pokemon = choice2}
-    if (choice == "3") {user_pokemon = choice3}
+    if (choice == "1") {user_pokemon = choice1;}
+    if (choice == "2") {user_pokemon = choice2;}
+    if (choice == "3") {user_pokemon = choice3;}
 
     cout << endl;
     cout << "Congratulations!" << endl;
     cout << "You obtained " << user_pokemon << "!" << endl;
+    cout << pokeArt;
 
     //User stats
     if (user_pokemon == "Venusaur") {
@@ -131,7 +148,7 @@ int main() {
 
     //Opponent stats
     while (battle1_pokemon == "" || battle1_pokemon == user_pokemon) {
-        battle1_pokemon = rand;
+        battle1_pokemon = pokechoices[rand() % pokechoices.size()];
     }
     if (battle1_pokemon == "Venusaur") {
         opp_hp = 301;
@@ -196,11 +213,43 @@ int main() {
         opp_spd = 186;
         opp_spe = 256;
     }
-    cout << "A challeneger approaches..." << endl;
-    cout << "Challenger sent out " << battle1_pokemon << " for battle! << endl;
+    cout << endl;
+    cout << "A challenger approaches..." << endl;
+    cout << "Challenger sent out " << battle1_pokemon << " for battle!" << endl;
+    cout << endl;
 
-        //Battle details
-        //To be continued...
+    //Battle Sim
+    int current_hp = hp;
+    int current_opp_hp = opp_hp;
+    int fight_or_run = 0;
+    cout << user_pokemon << " HP: " << current_hp << "/" << hp << endl;
+    cout << battle1_pokemon << " HP: " << current_opp_hp << "/" << opp_hp << endl;
+    cout << endl;
+    cout << "What will you do?" << endl;
+    cout << "1) Fight" << endl;
+    cout << "2) Run" << endl;
+    cout << endl;
+    while (fight_or_run != 1 && fight_or_run != 2) {
+        cin >> fight_or_run;
+        if (choice != "1" && choice != "2") {
+            cout << "Invalid input..." << endl;
+            cout << endl;
+            cout << "What would you do?" << endl;
+            cout << "1) Fight" << endl;
+            cout << "2) Run" << endl;
+            cout << endl;
+        }
+    }
+    cout << endl;
+    if (fight_or_run == 1) {//FIGHT
+        cout << "Program is incomplete. Need more variables to create battle scenario..." << endl;
+        cout << "To be continued..." << endl;
+    }
+    if (fight_or_run == 2) {//RUN
+        cout << "Got away safely..." << endl;
+        cout << "See you next time!" << endl;
+    }
+
 
 
     return 0;
