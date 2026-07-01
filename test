@@ -1,0 +1,55 @@
+
+
+outcomes = {
+"death",
+"bubbleshield",
+"$1000",
+"$1000",
+"$1000",
+"$1000",
+"$1000",
+"$1000",
+"$20,000"
+};
+
+char start;
+
+cout << "Welcome... to the game of Doors." << endl;
+cout << "You will be introduced to three diffent doors. If you decide to play..." << endl;
+cout << "each correct door earns you $1,000. But pick the wrong door?" << endl;
+cout << "Rest in Peace." << endl;
+cout << endl;
+cout << "Dare to play? (Press 'Y' to advance)" << endl;
+cin >> start
+cout << endl;
+
+if (start.toupper == "Y") {
+
+char doorchoice = ""
+int earnings = 0
+
+while (doorchoice =! death) {
+cout 
+
+
+}
+
+
+
+
+else {
+cout << "You live to see another day..." << endl;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
