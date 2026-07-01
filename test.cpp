@@ -24,14 +24,16 @@ int main() {
   char start;
        ___
 
+  string deathart = R"(
+         
   ,-'RIP'-,
   | .---. |
   |( # # )_\|/_
   | | # | | /
   | :+++: |/
   |  `|`  /
-
-
+         
+  )";
 
 
   cout << "Welcome... to the game of Doors." << endl;
@@ -114,6 +116,7 @@ int main() {
         if (bubble = 0) {
           cout << "You have pressed your luck and met your end." << endl;
           cout << "You are now dead..." << endl;
+          cout << deathart << endl;
           earnings *= 0;
           break;
         cout << endl;
