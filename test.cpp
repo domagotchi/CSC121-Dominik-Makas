@@ -22,6 +22,17 @@ int main() {
   int rounds = 0;
   int earnings = 0;
   char start;
+       ___
+
+  ,-'RIP'-,
+  | .---. |
+  |( # # )_\|/_
+  | | # | | /
+  | :+++: |/
+  |  `|`  /
+
+
+
 
   cout << "Welcome... to the game of Doors." << endl;
   cout << "You will be introduced to three diffent doors. If you decide to play..." << endl;
