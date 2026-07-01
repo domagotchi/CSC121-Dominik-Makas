@@ -1,6 +1,5 @@
 
-
-outcomes = {
+vector<string> outcomes = {
 "death",
 "bubbleshield",
 "$1000",
