@@ -47,11 +47,7 @@ class ComplexNumber {
         }
 
         string prettyPrint() const {
-            if (imaginary >= 0) {
                 return to_string(real) + " + " + to_string(imaginary) + "i";
-            } else {
-                return to_string(real) + " - " + to_string(-imaginary) + "i";
-            }
         }
 };
 
