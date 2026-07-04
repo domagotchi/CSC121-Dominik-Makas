@@ -47,7 +47,7 @@ class ComplexNumber {
         }
 
         string prettyPrint() const {
-                return to_string(real) + " + " + to_string(imaginary) + "i";
+            return to_string(real) + " + " + to_string(imaginary) + "i";
         }
 };
 
