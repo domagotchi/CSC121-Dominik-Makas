@@ -7,6 +7,7 @@ using namespace std;
 
 int main() {
     srand(time(nullptr));
+    
     int gameMode;
     BattleshipBoard p1Board;
     BattleshipBoard p2Board;
